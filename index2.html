@@ -1,0 +1,63 @@
+<html>
+<head> <title> Calculadora de energia </title>
+ 
+<script>
+function calcular(){
+ 
+let potencia = document.getElementById("potencia").value;
+let horas = document.getElementById("horas").value;
+let dias = document.getElementById("dias").value;
+ 
+let resultado = (potencia * horas * dias)/1000;
+document.getElementById("divresultado").innerHTML = resultado;
+ 
+}
+ 
+function limpar(){
+	document.getElementById("potencia").value = "";
+	document.getElementById("horas").value = "";
+	document.getElementById("dias").value = "";
+	document.getElementById("potencia").focus();
+	document.getElementById("divresultado").innerHTML = "";
+}
+ 
+</script>
+</head>
+ 
+<body>
+<h2 align=center> Calculadora de energia </h2>
+ 
+<center>
+<table>
+<tr>
+<td> Potência				</td>
+<td> <input type="text" id="potencia">	</td>
+</tr>	
+<tr>
+<td> Horas				</td>
+<td> <input type="text" id="horas">	</td>
+</tr>
+<tr>
+<td> Dias				</td>
+<td> <input type="text" id="dias">	</td>
+</tr>
+<tr>
+<td> <input type="button" value="Calcular" onclick="calcular()">	</td>
+<td> <input type="button" value="Limpar" onclick="limpar()">	</td>
+</tr>	
+<tr>
+<td> </td>
+<td> </td>
+</tr>	
+<tr>
+<td> Resultado				</td>
+<td> <div id="divresultado">   </td>
+</tr>	
+ 
+</table>
+</center>
+ 
+</body>
+</html>
+ 
+ 
